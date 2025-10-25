@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ngo.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Daily Installment Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 NGO Daily Installment Manager</h1>
+
+    <!-- সদস্য যুক্ত করার ফর্ম -->
+    <div class="card">
+      <h2>সদস্য যুক্ত করুন</h2>
+      <form id="memberForm">
+        <input type="text" id="name" placeholder="নাম" required>
+        <input type="number" id="loan" placeholder="মোট লোন (৳)" required>
+        <input type="number" id="installment" placeholder="দৈনিক কিস্তি (৳)" required>
+        <button type="submit">➕ যুক্ত করুন</button>
+      </form>
+    </div>
+
+    <!-- সদস্য তালিকা -->
+    <div class="card">
+      <h2>সদস্য তালিকা</h2>
+      <table id="memberTable">
+        <thead>
+          <tr>
+            <th>নাম</th>
+            <th>মোট লোন</th>
+            <th>দৈনিক কিস্তি</th>
+            <th>পরিশোধ</th>
+            <th>বাকি</th>
+            <th>অ্যাকশন</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="ngo.js"></script>
+</body>
+</html>
+
+</body>
+</html>
