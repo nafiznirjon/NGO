@@ -1,57 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ngo.css">
-</head>
-<body>
-    <!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NGO Daily Installment Manager</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Login | NGO Daily Installment Manager</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  <div class="container">
+  <div class="login-container">
     <h1>💰 NGO Daily Installment Manager</h1>
-
-    <!-- সদস্য যুক্ত করার ফর্ম -->
-    <div class="card">
-      <h2>সদস্য যুক্ত করুন</h2>
-      <form id="memberForm">
-        <input type="text" id="name" placeholder="নাম" required>
-        <input type="number" id="loan" placeholder="মোট লোন (৳)" required>
-        <input type="number" id="installment" placeholder="দৈনিক কিস্তি (৳)" required>
-        <button type="submit">➕ যুক্ত করুন</button>
+    <div class="login-card">
+      <h2>লগইন করুন</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="ইউজারনেম" required>
+        <input type="password" id="password" placeholder="পাসওয়ার্ড" required>
+        <button type="submit">🔓 
+          <a href="main.html">লগইন</a>
+        </button>
       </form>
-    </div>
-
-    <!-- সদস্য তালিকা -->
-    <div class="card">
-      <h2>সদস্য তালিকা</h2>
-      <table id="memberTable">
-        <thead>
-          <tr>
-            <th>নাম</th>
-            <th>মোট লোন</th>
-            <th>দৈনিক কিস্তি</th>
-            <th>পরিশোধ</th>
-            <th>বাকি</th>
-            <th>অ্যাকশন</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <p class="note">Demo: <b>admin / 12345</b></p>
     </div>
   </div>
 
-  <script src="ngo.js"></script>
-</body>
-</html>
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      // Simple demo login
+      if (user === 'admin' && pass === '12345') {
+        alert('Login successful!');
+        window.location.href = 'main.html'; // Redirect to main page
+      } else {
+        alert('Invalid username or password!');
+      }
+    });
+  </script>
 </body>
 </html>
